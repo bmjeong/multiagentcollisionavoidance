@@ -8,9 +8,15 @@
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "src/main.py",
+            // "program": "${workspaceFolder}/src/mission_planner/main.py",
+            //"program": "${workspaceFolder}/src/main.py",
+            "program": "${workspaceFolder}/src/mission_planner/prm/main.py",
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src:${env:PYTHONPATH}"
+            }
         }
     ]
 }
